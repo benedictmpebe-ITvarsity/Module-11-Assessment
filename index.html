@@ -5,14 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="">
-        
+
         <title>Mini Blog</title>
-        
+
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/custom.css">
-        <link rel="fontAweaome/css/all.css" rel="stylesheet">
+        <link href="fontawesome/css/all.css" rel="stylesheet">
     </head>
-    
+
     <body onload="init()">
         <div class="d-flex flex-column align-items-center p-3 bg-white border-bottom box-shadow fixed-top">
             <img src="img/mini-blog-logo.png" height="40"/>
@@ -24,7 +24,7 @@
         </div>
         
         <div class="blog-header mx-auto text-center">
-            <h1>Is It Beautiful?</h1>
+            <h1>Is it Beautiful?</h1>
             <p class="lead">All the latest <strong><em>Tech</em></strong>, <strong><em>Design</em></strong> and <strong><em>Development</em></strong> news from around the world.</p>
         </div>
         
@@ -83,11 +83,12 @@
                 fetch(rootPath + 'get-posts/?category=' + category)
                     .then(function(response){
                         return response.json();
-                })                
+                })
                     .then(function(data){
                         displayPosts(data);
                 })
             }
+            
             
             function displayPosts(data){
                 var output = "";
@@ -96,7 +97,7 @@
                     output +=`
                         <div class="card mb-4 box-shadow">
                             <div class="card-header">
-                                <h4 class="my-0 font-weight-mormal">${data[a][0]}</h4>
+                                <h4 class="my-0 font-weight-normal">${data[a][0]}</h4>
                             </div>
                             <div class="card-body">
                                 <img src="${rootPath}/uploads/${data[a][3]}" class="card-img-top"/>
@@ -113,7 +114,6 @@
                         </div>
                     `;
                 }
-                
                 document.getElementById("posts").innerHTML = output;
             }
             
@@ -124,10 +124,22 @@
                 
                 document.getElementById(id).classList.add("active");
             }
-        
+            
         </script>
     </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

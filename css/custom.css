@@ -3,9 +3,9 @@ html {
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 .blog-header {
@@ -45,6 +45,16 @@ html {
 .active {
     border-bottom: 1px solid black;
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
